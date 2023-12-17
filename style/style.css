@@ -120,11 +120,6 @@ header .logo {
 }
 
 .custom-dropdown-item:hover {
-  background-color: var(--light-color) !important;
-  color: #fff !important;
-}
-
-.custom-dropdown-item.active {
-  background-color: var(--mid-color) !important;
+  background-color: var(--secondary-color) !important;
   color: #fff !important;
 }

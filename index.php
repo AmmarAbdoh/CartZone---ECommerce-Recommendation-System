@@ -15,15 +15,15 @@
    </head>
    <body>
       <?php  if(isset($_SESSION['user_name'])) showHeader($_SESSION['user_name']); else echo showHeader("Guest");  ?>
-      <div class="bg-dark text-white py-5 mt-5" style="background-color:#210070 !important">
-         <div class="container py-5">
-            <h1>
+      <div class="container-flued mx-5 mt-5">
+         <div class="d-flex flex-row justify-content-around align-items-center  mt-4 p-5 text-white rounded " style="background-color: #80D0C7;background-image: linear-gradient(160deg, #80D0C7 11%, #0093E9 79%);" >
+            <h1 class="display-5">
                Best products & <br />
                brands in our store
             </h1>
-            <p style="color:var(--light-color)">
-               Trendy Products, Factory Prices, Excellent Service
-            </p>
+            <p class="h3 text-white" style="text-shadow: 3px 3px 14px #210091">
+            <span>&#10003;</span> Trendy Products<br /> <span>&#10003;</span> Factory Prices<br /> <span>&#10003;</span> Excellent Service
+            </p> 
          </div>
       </div>
       <?php
@@ -40,13 +40,15 @@
            echo "<hr>";
          } 
          ?>
-      <div class='suggestText'>Hot Items</div>
+      <div class='suggestText' style="text-shadow: 2px 2px 1.2px #210070; background-color: #0093E9;background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
+      Hot Items</div>
       <?php generateItems(6) ?>
-      <section class="mt-5 d-flex" style="background-color: #210070;">
-         <div class="container text-dark pt-3">
-            <header class="pt-4 pb-3">
-               <h3 class="title">Why choose us</h3>
+      <section class="container-flued mx-5 mt-5  rounded" style="background: linear-gradient(270deg,#6B73FF,#210070);">
+            <header class="pt-4 pb-3 mx-full text-center">
+               <h3 class="title ">Why choose us</h3>
             </header>
+            <div class="container d-flex justify-content-around text-dark py-3 px-5">
+            
             <div class="row mb-4">
                <div class="col-lg-4 col-md-6">
                   <figure class="d-flex align-items-center mb-4">

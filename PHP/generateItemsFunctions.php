@@ -62,8 +62,7 @@ function generateItems($n) {
     $result = DB()->query($query);
 
     if ($result && $result->num_rows > 0) {
-        echo "<div class='row ms-2 me-2 d-flex justify-content-center'>";
-
+        echo "<div class=' row mx-4 mb-5 d-flex justify-content-center'>";
         while ($row = $result->fetch_assoc()) {
             $randomImage = $row['item_img'];
             $randomName = $row['item_name'];
@@ -72,9 +71,10 @@ function generateItems($n) {
             $rate = $_SESSION['rateArray'][$randomId];
             $phpFileUrl = "item_view.php?id=$randomId";
 
+            //Ammar
             echo "
                 <div class='col-lg-2 col-md-4 col-sm-6 d-flex'>
-                    <div class='card w-100 my-2 shadow-2-strong'>
+                    <div class='card w-100 h-100 my-2 shadow-2-strong'>
                         <img src='$randomImage' class='card-img-top' style='aspect-ratio: 1 / 1'/>
                         <div class='card-body d-flex flex-column'>
                             <h5 class='card-title' style='min-height: 8rem;'>$randomName</h5>
@@ -89,14 +89,45 @@ function generateItems($n) {
                             echo "</div>
                             
                             <div class='card-footer d-flex justify-content-center pt-3 px-0 pb-0 mt-auto'>
-                                <a href='$phpFileUrl' class='button shadow-0 me-1'>View Item</a>
+                                <a href='$phpFileUrl' class='button m-4 p-3 w-100 shadow-0 text-center'>View Item</a>
                             </div>
                         </div>
                     </div>
                 </div>
             ";
-
-
+            
+            // Omar
+//                 echo "
+//                 <div class='card d-flex flex-column justify-content-center h align-items-center  m-3 border-0 rounded-0 shadow' style='width: 16rem;'>
+//                         <img src='$randomImage' class='card-img-top rounded-0'>
+//                         <div class='card-body mt-3 mb-3'>
+//                             <div class='row'>
+//                                 <div class='col-10'>
+//                                     <h4 class='card-title'>$randomName</h4>
+//                                     <!-- Star Rating -->
+//                                     <div class='d-flex justify-content-center'>
+//                                     <span class='rating-value ms-2'>$rate</span>
+//                                     </div>
+//                                     <div class='d-flex justify-content-center mb-3'>";
+//                                     echo generateStarRating($rate);
+//                                     echo "</div>
+//                                 </div>
+//                                 <div class='col-2'>
+//                                     <i class='bi bi-bookmark-plus fs-2'></i>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                         <div class='row align-items-center text-center g-0'>
+//                             <div class='col-4'>
+//                                 <h5>$$randomPrice</h5>
+//                             </div>
+//                             <div class='col-8'>
+//                                 <a href='$phpFileUrl' class='btn btn-dark w-100 p-3 rounded-0 text-warning'>View Item</a>
+//                             </div>
+//                         </div>
+//                 </div>
+// ";
+            // 
         }
 
         echo "</div>";

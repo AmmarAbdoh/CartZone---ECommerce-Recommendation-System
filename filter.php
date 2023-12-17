@@ -14,7 +14,7 @@
    $category = isset($_GET['category']) ? $_GET['category'] : '';
    
    $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-   $itemsPerPage = 10; 
+   $itemsPerPage = 12; 
    
    if (isset($_GET['submit'])) {
        $filterUrl = "filter.php?search=$search&rate=$rate&price=$price&category=$category&page=$currentPage";
